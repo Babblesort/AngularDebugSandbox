@@ -4,6 +4,9 @@ module.exports = function (grunt) {
     eslint: {
       src: ['src/**/*.js'],
     },
+    clean: {
+      dist: ['dist']
+    },
     concat: {
       options: {
         internal: {
@@ -51,12 +54,13 @@ module.exports = function (grunt) {
   });
 
   grunt.loadNpmTasks('gruntify-eslint');
+  grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.registerTask('default', ['eslint']);
-  grunt.registerTask('build', ['eslint', 'concat', 'copy', 'uglify']);
+  grunt.registerTask('build', ['eslint', 'clean', 'concat', 'copy', 'uglify']);
   grunt.registerTask('serve', ['build', 'watch']);
 };
