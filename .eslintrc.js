@@ -1,6 +1,13 @@
 module.exports = {
-    "extends": "airbnb-base",
-    "plugins": [
-        "import"
-    ]
+  "extends": "eslint:recommended",
+  "plugins": [
+    "import"
+  ],
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "globals": {
+    "angular": true
+  }
 };

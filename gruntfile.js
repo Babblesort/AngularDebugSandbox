@@ -61,6 +61,6 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.registerTask('default', ['eslint']);
-  grunt.registerTask('build', ['eslint', 'clean', 'concat', 'copy', 'uglify']);
+  grunt.registerTask('build', ['clean', 'eslint', 'concat', 'copy', 'uglify']);
   grunt.registerTask('serve', ['build', 'watch']);
 };
