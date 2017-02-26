@@ -1,5 +1,4 @@
 angular.module('angulardebugsandbox', [])
-.run(() => {})
 .controller('SumController', $scope => {
   $scope.data = {
     num1: 0,
