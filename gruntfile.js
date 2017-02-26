@@ -7,6 +7,21 @@ module.exports = function (grunt) {
     clean: {
       dist: ['dist']
     },
+    babel: {
+      options: {
+        sourceMap: true
+      },
+      dist: {
+        files: [
+          {
+                expand: true,
+                cwd: 'dist/',
+                src: ['*.js'],
+                dest: 'dist/'
+          }
+        ]
+      }
+    },
     concat: {
       options: {
         internal: {
@@ -55,12 +70,14 @@ module.exports = function (grunt) {
 
   grunt.loadNpmTasks('gruntify-eslint');
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-babel');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.registerTask('default', ['eslint']);
-  grunt.registerTask('build', ['clean', 'eslint', 'concat', 'copy', 'uglify']);
+  grunt.registerTask('default', ['babel']);
+  grunt.registerTask('build', ['clean', 'eslint', 'concat', 'babel', 'copy']);
   grunt.registerTask('serve', ['build', 'watch']);
 };
