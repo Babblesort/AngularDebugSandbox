@@ -21,7 +21,7 @@ module.exports = function (grunt) {
           }
         ]
       }
-    },
+    },    
     concat: {
       options: {
         internal: {
