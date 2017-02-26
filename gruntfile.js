@@ -62,9 +62,21 @@ module.exports = function (grunt) {
         }
       }
     },
+    express: {
+      dev: {
+        options: {
+          script: 'server/index.js'
+        }
+      }
+    },
     watch: {
-      files: ['src/**/*.js', 'src/*.html'],
-      tasks: ['build']
+      express: {
+        files: ['src/**/*.js', 'src/*.html'],
+        tasks: ['build', 'express:dev'],
+        options: {
+          spawn: false
+        }
+      }
     }
   });
 
@@ -75,9 +87,10 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-express-server');
 
   grunt.registerTask('default', ['eslint']);
   grunt.registerTask('default', ['babel']);
   grunt.registerTask('build', ['clean', 'eslint', 'concat', 'babel', 'copy']);
-  grunt.registerTask('serve', ['build', 'watch']);
+  grunt.registerTask('serve', ['build', 'express', 'watch']);
 };

@@ -4,7 +4,8 @@
   "description": "test debug sandbox",
   "main": "index.js",
   "dependencies": {
-    "angular": "1.5.8"
+    "angular": "1.5.8",
+    "express": "^4.14.1"
   },
   "devDependencies": {
     "babel-preset-env": "^1.1.10",
@@ -19,6 +20,7 @@
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-uglify": "^1.0.1",
     "grunt-contrib-watch": "^1.0.0",
+    "grunt-express-server": "^0.5.3",
     "gruntify-eslint": "^3.1.0",
     "load-grunt-tasks": "3.3.0"
   },
