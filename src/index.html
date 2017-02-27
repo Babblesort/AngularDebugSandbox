@@ -10,8 +10,8 @@
   <script src="vendor.js" type="text/javascript"></script>
   <script src="angulardebugsandbox.js" type="text/javascript"></script>
 </head>
-<body ng-app="angulardebugsandbox" ng-controller="SumController" >  
-  <div>
+<body ng-app="sandbox" >  
+  <div ng-controller="SumController">
     <h3>Sum Of All</h3>
     <input type="text" placeholder="num1" ng-model="data.num1" ng-change="onNumChange()" />
     <span>+</span>
