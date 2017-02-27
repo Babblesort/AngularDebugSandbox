@@ -13,9 +13,9 @@
 <body ng-app="sandbox" >  
   <div ng-controller="SumController">
     <h3>Sum Of All</h3>
-    <input type="text" placeholder="num1" ng-model="data.num1" ng-change="onNumChange()" />
+    <input type="number" placeholder="num1" ng-model="data.num1" ng-change="onNumChange()" />
     <span>+</span>
-    <input type="text" placeholder="num2" ng-model="data.num2" ng-change="onNumChange()" />
+    <input type="number" placeholder="num2" ng-model="data.num2" ng-change="onNumChange()" />
     <span>=</span>
     <span>{{data.sum}}</span>
   </div>
