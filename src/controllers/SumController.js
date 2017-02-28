@@ -1,6 +1,5 @@
 let parseOrZero = num => parseInt(num, 10) || 0;
-
-angular.module('sandbox').controller('SumController', $scope => {
+let createSumController = $scope => {
   $scope.data = {
     num1: 0,
     num2: 0,
@@ -9,4 +8,6 @@ angular.module('sandbox').controller('SumController', $scope => {
   $scope.onNumChange = () => {
     $scope.data.sum = parseOrZero($scope.data.num1) + parseOrZero($scope.data.num2);
   };
-});
+}
+
+angular.module('sandbox').controller('SumController', createSumController);
