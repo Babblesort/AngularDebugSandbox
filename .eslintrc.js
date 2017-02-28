@@ -9,5 +9,8 @@ module.exports = {
   },
   "globals": {
     "angular": true
+  },
+  "rules": {
+    "no-var": 1
   }
 };
