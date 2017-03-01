@@ -5,6 +5,19 @@ let createSumController = $scope => {
     num2: 0,
     sum: 0,
   };
+  $scope.stuffRows = [
+    {
+      id: 1,
+      name: 'widget',
+      partNum: '666'
+    },
+    {
+      id: 2,
+      name: 'gadget',
+      partNum: '411'
+    }
+
+  ];
   $scope.onNumChange = () => {
     $scope.data.sum = parseOrZero($scope.data.num1) + parseOrZero($scope.data.num2);
   };
