@@ -3,5 +3,7 @@ angular.module('sandbox').component('fooList', {
       rows: '<'
     },
     controllerAs: 'model',
-    template: '<div ng-repeat="row in model.rows"><foo-row row-data="row"></foo-row></div>'
+    template: `<div ng-repeat="row in model.rows">
+                 <foo-row row-data="row"></foo-row>
+               </div>`
 });
