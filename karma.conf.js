@@ -25,13 +25,18 @@ module.exports = function (config) {
         return file.originalPath;
       }
     },
-    reporters: ['progress'],
+    reporters: ['progress', 'html'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
     autoWatchBatchDelay: 300,
     browsers: ['Chrome'],
+    client: {
+      mocha: {
+        reporter: 'html'
+      }
+    },
     singleRun: false,
     concurrency: Infinity
   })

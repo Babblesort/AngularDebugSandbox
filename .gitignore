@@ -30,6 +30,7 @@ build/Release
 node_modules
 jspm_packages
 dist
+karma_html
 
 # Optional npm cache directory
 .npm

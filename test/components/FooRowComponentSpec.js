@@ -20,4 +20,8 @@ describe('Component: FooRow', function () {
     let div = element.find('div');
     expect(div.text()).to.equal('1-widget-666');
   });
+
+  it('should pass', function () {
+    expect(true).to.equal(true);
+  });
 });
