@@ -13,7 +13,7 @@ describe('Component: FooRow', function () {
       name: 'widget',
       partNum: '666'
     };
-    scope.$apply();
+    scope.$digest();
   }));
 
   it('should render the text', function () {
