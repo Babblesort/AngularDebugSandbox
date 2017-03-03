@@ -5,9 +5,9 @@ angular.module('sandbox').filter('middleEllipsize', () => {
       return text;
     }
     else {
-      let charPluckCount = maxCharacters - ellipsisText.length;
-      let frontCount = Math.ceil(charPluckCount / 2);
-      let backCount = Math.floor(charPluckCount / 2);
+      let charsPerSide = (maxCharacters - ellipsisText.length) / 2;
+      let frontCount = Math.ceil(charsPerSide);
+      let backCount = Math.floor(charsPerSide);
       let frontLetters = text.substr(0, frontCount);
       let backLetters = backCount > 0 ? text.substr(-backCount) : '';
       return `${frontLetters}${ellipsisText}${backLetters}`;
