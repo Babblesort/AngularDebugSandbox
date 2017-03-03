@@ -25,7 +25,7 @@ module.exports = function (config) {
         return file.originalPath;
       }
     },
-    reporters: ['progress', 'html'],
+    reporters: ['html'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
