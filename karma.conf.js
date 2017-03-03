@@ -31,7 +31,7 @@ module.exports = function (config) {
     logLevel: config.LOG_INFO,
     autoWatch: true,
     autoWatchBatchDelay: 300,
-    browsers: ['Chrome'],
+    browsers: [],
     client: {
       mocha: {
         reporter: 'html'

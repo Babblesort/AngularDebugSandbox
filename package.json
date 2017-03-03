@@ -38,6 +38,6 @@
   "author": "",
   "scripts": {
     "serve": "./node_modules/.bin/grunt serve",
-    "karma": "./node_modules/.bin/karma start karma.conf.js --browsers=Chrome --single-run=false"
+    "karma": "./node_modules/.bin/karma start karma.conf.js --single-run=false"
   }
 }
