@@ -1,7 +1,7 @@
 angular.module('sandbox').filter('middleEllipsize', () => {
   return (text, maxCharacters = 25, ellipsisText = '...') => {
     text = text || '';
-    if(text.length <= maxCharacters) {
+    if(text.length <= maxCharacters || ellipsisText.length >= maxCharacters) {
       return text;
     }
     else {

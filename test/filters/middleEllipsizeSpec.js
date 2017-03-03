@@ -27,4 +27,14 @@ describe('Filter: middleEllipsize', function () {
     expect(middleEllipsizeFilter('abcdefgh', 6)).to.equal('ab...h');
     expect(middleEllipsizeFilter('abcdefghi', 8)).to.equal('abc...hi');
   });
+
+  it('uses custom ellipsisText if passed in', function () {
+    expect(middleEllipsizeFilter('abcdefgh', 6, '!!')).to.equal('ab!!gh');
+    expect(middleEllipsizeFilter('abcdefghi', 7, '!!')).to.equal('abc!!hi');
+  });
+
+  it('returns text unchanged if ellipsisText length <= maxCharacters', function () {
+    expect(middleEllipsizeFilter('abcd', 3)).to.equal('abcd');
+    expect(middleEllipsizeFilter('abcd', 4, '!-!-')).to.equal('abcd');
+  });
 });
