@@ -1,11 +1,11 @@
 describe('Filter: middleEllipsize', function () {
 
   let middleEllipsizeFilter;
-  beforeEach(module('sandbox'));
-
-  beforeEach(inject(function(_middleEllipsizeFilter_) {
-    middleEllipsizeFilter = _middleEllipsizeFilter_;
-  }));
+  let beforeEachSetup = () => {
+    module('sandbox');
+    inject(_middleEllipsizeFilter_ => middleEllipsizeFilter = _middleEllipsizeFilter_);
+  }
+  beforeEach(beforeEachSetup);
 
   it('returns text unchanged if text length less <= maxCharacters', function () {
     expect(middleEllipsizeFilter('abc', 4)).to.equal('abc');
