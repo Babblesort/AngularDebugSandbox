@@ -1,4 +1,4 @@
-describe('Filter: middleEllipsizeFilter', function () {
+describe('Filter: middleEllipsize', function () {
 
   let middleEllipsizeFilter;
   beforeEach(module('sandbox'));
@@ -12,9 +12,14 @@ describe('Filter: middleEllipsizeFilter', function () {
     expect(middleEllipsizeFilter('abcd', 4)).to.equal('abcd');
   });
 
+  it('returns empty string if text is null or undefined', function () {
+    expect(middleEllipsizeFilter(null, 4)).to.equal('');
+    expect(middleEllipsizeFilter(undefined, 4)).to.equal('');
+  });
+
   it('returns text changed if text length > maxCharacters', function () {
-    expect(middleEllipsizeFilter('abcde', 4)).to.equal('a...e');
-    expect(middleEllipsizeFilter('abcdefg', 4)).to.equal('ab...fg');
+    expect(middleEllipsizeFilter('abcde', 4)).to.equal('a...');
+    expect(middleEllipsizeFilter('abcdefg', 5)).to.equal('a...g');
     expect(middleEllipsizeFilter('abcdefgh', 7)).to.equal('ab...gh');
   });
 
