@@ -1,0 +1,12 @@
+{
+  "name": "angulardebugsandbox",
+  "dependencies": {
+    "angular": "registry:dt/angular#1.6.0+20170223151516"
+  },
+  "globalDependencies": {
+    "angular-protractor": "registry:dt/angular-protractor#1.5.0+20161101133457",
+    "chai": "registry:dt/chai#3.4.0+20170217154556",
+    "chai-as-promised": "registry:dt/chai-as-promised#0.0.0+20160510010627",
+    "mocha": "registry:dt/mocha#2.2.5+20170204022515"
+  }
+}
