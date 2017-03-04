@@ -37,4 +37,10 @@ describe('Filter: middleEllipsize', function () {
     expect(filter('abcd', 3)).to.equal('abcd');
     expect(filter('abcd', 4, '!-!-')).to.equal('abcd');
   });
+
+  it('treats numbers as text', function () {
+    expect(filter(123456, 5)).to.equal('1...6');
+    expect(filter(99999999, 6, '***')).to.equal('99***9');
+  });
+
 });
