@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Attach To Chrome Running in Remote Debugging Mode",
+      "type": "chrome",
+      "request": "attach",
+      "port": 9222,
+      "url": "localhost:3000",
+      "webRoot": "${workspaceRoot}/src"
+    }
+  ]
+}
