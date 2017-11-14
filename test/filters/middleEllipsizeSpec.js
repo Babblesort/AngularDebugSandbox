@@ -33,7 +33,7 @@ describe('Filter: middleEllipsize', function () {
     expect(filter('abcdefghi', 7, '!!')).to.equal('abc!!hi');
   });
 
-  it('returns text unchanged if ellipsisText length <= maxCharacters', function () {
+  it('returns text unchanged if ellipsisText length >= maxCharacters', function () {
     expect(filter('abcd', 3)).to.equal('abcd');
     expect(filter('abcd', 4, '!-!-')).to.equal('abcd');
   });
